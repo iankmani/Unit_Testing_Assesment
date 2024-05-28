@@ -26,4 +26,35 @@ function gradeHumanities(marks){
                         }
 }
 
+function gradeLanguagesnComp(marks){
+    if(marks >= 75 && marks <= 100){
+        return "A";
+        } else if(marks >= 65 && marks < 74){
+            return "B";
+            } else if(marks >= 55 && marks < 64){
+                return "C";
+                } else if(marks >= 45 && marks < 54){
+                    return "Pass";
+                    } else {
+                        return "Sup";
+                        }
+}
+
+function calculateGradesAndAverage(marks){
+    let totalMarks = 0;
+    let grades = [];
+    for(let i = 0; i < marks.length; i++){
+        if(i === 0 || i === 1){
+            grades.push(gradeSciences(marks[i]));
+            totalMarks += marks[i];
+            } else if(i === 2 || i === 3){
+                grades.push(gradeHumanities(marks[i]));
+                totalMarks += marks[i];
+                } else {
+                    grades.push(gradeLanguagesnComp(marks[i]));
+                    totalMarks += marks[i];
+                }                    
+            }
+}
+
                 
