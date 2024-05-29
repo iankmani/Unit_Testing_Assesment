@@ -66,3 +66,5 @@ function calculateGradesAndAverage(){
 }
 const output = calculateGradesAndAverage(studentScore);
 console.log(output);
+
+module.exports = {gradeSciences, gradeHumanities, gradeLanguagesnComp, calculateGradesAndAverage};
