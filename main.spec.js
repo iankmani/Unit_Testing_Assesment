@@ -1,6 +1,4 @@
-
-
-const {gradeSciences, gradeHumanities} = require ("./main");
+const {gradeSciences, gradeHumanities, gradeLanguagesnComp} = require ("./main");
 
 describe ("gradeSciences" , () => {
     it ("should return the grade of the sciences", () => {
@@ -41,6 +39,25 @@ it ("should return Sup if the grade is less than 50" , () =>{
 })
 
 });
+
+describe("gradeLanguagesnComp", () =>{
+    it ("should return A if marks if greartr than 75", () => {
+        expect(gradeLanguagesnComp(85)).toEqual("A");
+})
+it("should return B if the grade is more than 65 and less than 74" ,() => {
+    expect(gradeLanguagesnComp(70)).toEqual("B");
+})
+it("should return C if marks is greater than or equal to 55 and less than 64" , () =>{
+    expect(gradeLanguagesnComp(60)).toEqual("C");
+})
+it ("should return Pass if the grade is greater than 45 and less than 54" ,() =>{
+    expect(gradeLanguagesnComp(50)).toEqual("Pass");
+})
+it ("should return Sup if the grade is less than 45" , () =>{
+        expect(gradeLanguagesnComp(39)).toEqual("Sup");
+})
+});
+
 
 
 
