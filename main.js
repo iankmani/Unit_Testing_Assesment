@@ -40,21 +40,29 @@ function gradeLanguagesnComp(marks){
                         }
 }
 
-function calculateGradesAndAverage(marks){
-    let totalMarks = 0;
-    let grades = [];
-    for(let i = 0; i < marks.length; i++){
-        if(i === 0 || i === 1){
-            grades.push(gradeSciences(marks[i]));
-            totalMarks += marks[i];
-            } else if(i === 2 || i === 3){
-                grades.push(gradeHumanities(marks[i]));
-                totalMarks += marks[i];
-                } else {
-                    grades.push(gradeLanguagesnComp(marks[i]));
-                    totalMarks += marks[i];
-                }                    
-            }
-}
+const studentScore = {name: "Dennis Doe", math: 80, eng: 65, kis: 48, phy: 67, che: 56, re:89, comp: 82};
 
-                
+function calculateGradesAndAverage(){
+
+    
+   
+                        
+     const output = { jina : studentScore.name};
+     output.mathGrade = gradeSciences(studentScore.math);
+     output.engGrade = gradeLanguagesnComp(studentScore.eng);
+     output.kisGrade = gradeLanguagesnComp(studentScore.kis);
+     output.phyGrade = gradeSciences(studentScore.phy);
+     output.cheGrade = gradeSciences(studentScore.che);
+     output.reGrade = gradeHumanities(studentScore.re);
+     output.compGrade = gradeLanguagesnComp(studentScore.comp);
+     const totalMarks = (studentScore.math + studentScore.eng + studentScore.kis + studentScore
+    .phy + studentScore.che + studentScore.re + studentScore.comp) / 7;
+
+     output.average = Math.floor(totalMarks);
+
+       
+        return output;
+
+}
+const output = calculateGradesAndAverage(studentScore);
+console.log(output);
