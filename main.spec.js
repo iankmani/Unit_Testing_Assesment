@@ -1,4 +1,4 @@
-const {gradeSciences, gradeHumanities, gradeLanguagesnComp} = require ("./main");
+const {gradeSciences, gradeHumanities, gradeLanguagesnComp, calculateGradesAndAverage} = require ("./main");
 
 describe ("gradeSciences" , () => {
     it ("should return the grade of the sciences", () => {
@@ -57,6 +57,57 @@ it ("should return Sup if the grade is less than 45" , () =>{
         expect(gradeLanguagesnComp(39)).toEqual("Sup");
 })
 });
+
+// describe("calculateGradesAndAverage", () => {
+   
+             
+// it("should return object with grades, average and total marks", () => {
+//     const studentScore = {
+//         jina: "Dennis Doe",
+//         math: 80,
+//         comp: 90,
+//         eng: 69,
+//         kis: 50,
+//         che: 90,
+//         phy: 65,
+//         re: 85,
+
+//     };
+//     // const averagePoints = (studentScore.math + studentScore.eng + studentScore.kis + studentScore
+//     //     .phy + studentScore.che + studentScore.re + studentScore.comp) / 7;
+//         // output.average = Math.floor(totalMarks);
+    
+//                     expect(calculateGradesAndAverage(studentScore)).toEqual({
+//                         jina: "Dennis Doe",
+//                         math: "A",
+//                         comp: "A",
+//                         eng: "B",
+//                         kis: "pass",
+//                         chem: "A",
+//                         phy: "B",
+//                         re: "A",
+//                         average: 69,
+//                         cheGrade: "C",
+//                         compGrade: "A",
+//                         engGrade: "B",
+//                         kisGrade: "Pass",
+//                         mathGrade: "A",
+//                         name: "Dennis Doe",
+//                         phyGrade: "B",
+//                         reGrade: "A"
+
+                        
+
+//                     })
+                        
+                      
+//                         })
+//                         })
+                    
+         
+
+
+            
 
 
 

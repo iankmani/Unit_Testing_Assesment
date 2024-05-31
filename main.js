@@ -47,7 +47,7 @@ function calculateGradesAndAverage(){
     
    
                         
-     const output = { jina : studentScore.name};
+     const output = { name : studentScore.name};
      output.mathGrade = gradeSciences(studentScore.math);
      output.engGrade = gradeLanguagesnComp(studentScore.eng);
      output.kisGrade = gradeLanguagesnComp(studentScore.kis);
